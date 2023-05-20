@@ -96,6 +96,10 @@ if( !function_exists("mmscw_save_min_max_step_data")){
     $mmscw_min_qty = sanitize_text_field( $_POST["mmscw_min_qty"]);
     $mmscw_max_qty = sanitize_text_field( $_POST["mmscw_max_qty"]);
     $mmscw_qty_step = sanitize_text_field( $_POST["mmscw_qty_step"]);
+    
+    update_post_meta( $id, "mmscw_min_qty", $mmscw_min_qty, true);
+    update_post_meta( $id, "mmscw_max_qty", $mmscw_min_qty, true);
+    update_post_meta( $id, "mmscw_qty_step", $mmscw_min_qty, true);
   }
 }
 add_action( "woocommerce_process_product_meta","mmscw_save_min_max_step_data",333,2 );
