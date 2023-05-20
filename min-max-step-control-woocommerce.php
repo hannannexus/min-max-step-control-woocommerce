@@ -11,7 +11,7 @@
  */
 
 
-/*Add setting on product tab*/
+/*Add setting for products*/
 if( !function_exists("mmscw_add_new_tab")){
   function mmscw_add_new_tab( $tab ){
     $tab["mmscw_tab"] = array(
