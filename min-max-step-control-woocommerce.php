@@ -37,7 +37,7 @@ if( !function_exists("mmscw_add_settings_panel")){
 
                <?php
                   woocommerce_wp_text_input(array(
-                      "id" => "mmscw_min_qty",
+                      "id" => "_mmscw_min_qty",
                       "label"=> __("Set Minimum Quantity","min_max_step_control"),
                       "value"=> get_post_meta(get_the_ID(),"mmscw_min_qty", true ),
                       "desc_tip"=> true,
@@ -49,7 +49,7 @@ if( !function_exists("mmscw_add_settings_panel")){
                   ));
 
                   woocommerce_wp_text_input(array(
-                      "id" => "mmscw_max_qty",
+                      "id" => "_mmscw_max_qty",
                       "label"=> __("Set Maximum Quantity","min_max_step_control"),
                       "value" => get_post_meta(get_the_ID(),"mmscw_max_qty", true ),
                       "desc_tip"=> true,
@@ -61,7 +61,7 @@ if( !function_exists("mmscw_add_settings_panel")){
                   ));
          
                   woocommerce_wp_text_input(array(
-                      "id" => "mmscw_qty_step",
+                      "id" => "_mmscw_qty_step",
                       "label"=> __("Set Quantity Step ","min_max_step_control"),
                       "value"=> get_post_meta(get_the_ID(),"mmscw_qty_step", true ),
                       "desc_tip"=> true,
@@ -79,9 +79,9 @@ add_action("woocommerce_product_data_panels","mmscw_add_settings_panel");
 if( !function_exists("mmscw_save_min_max_step_data")){
   function mmscw_save_min_max_step_data( $id, $post){
     
-    $mmscw_min_qty = sanitize_text_field( $_POST["mmscw_min_qty"]);
-    $mmscw_max_qty = sanitize_text_field( $_POST["mmscw_max_qty"]);
-    $mmscw_qty_step = sanitize_text_field( $_POST["mmscw_qty_step"]);
+    $mmscw_min_qty = sanitize_text_field( $_POST["_mmscw_min_qty"]);
+    $mmscw_max_qty = sanitize_text_field( $_POST["_mmscw_max_qty"]);
+    $mmscw_qty_step = sanitize_text_field( $_POST["_mmscw_qty_step"]);
     
     update_post_meta( $id, "mmscw_min_qty", $mmscw_min_qty, true);
     update_post_meta( $id, "mmscw_max_qty", $mmscw_min_qty, true);
