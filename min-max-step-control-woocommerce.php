@@ -42,7 +42,7 @@ if( !function_exists("mmscw_add_settings_panel")){
                       "value"=> echo esc_attr(get_post_meta(get_the_ID(),"_mmscw_min_qty", true )),
                       "desc_tip"=> true,
                        "help_tip" => __("Set Minimum Quantity","min_max_step_control"),
-                      "type"=>"number",
+                      "type"=> "number",
                       "step"=> 1,
                       "min"=> 0,
                       "max"=> 0
@@ -54,7 +54,7 @@ if( !function_exists("mmscw_add_settings_panel")){
                       "value" => echo esc_attr( get_post_meta(get_the_ID(),"_mmscw_max_qty", true )),
                       "desc_tip"=> true,
                        "help_tip" => __("Set Maximum Quantity","min_max_step_control"),
-                      "type"=>"number",
+                      "type"=> "number",
                       "step"=> 1,
                       "min"=> 0,
                       "max"=> 0
@@ -66,7 +66,7 @@ if( !function_exists("mmscw_add_settings_panel")){
                       "value"=> echo esc_attr( get_post_meta(get_the_ID(),"_mmscw_qty_step", true )),
                       "desc_tip"=> true,
                        "help_tip" => __("Set Quantity Step","min_max_step_control"),
-                      "type"=>"number",
+                      "type"=> "number",
                       "step"=> 1,
                       "min"=> 0,
                       "max"=> 0
