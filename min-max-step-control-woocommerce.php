@@ -71,10 +71,10 @@ if( !function_exists("mmscw_add_settings_panel")){
                <?php
                   woocommerce_wp_text_input(array(
                     "id" => "mmscw_qty_step",
-                    "label"=> __("Set Maximum Quantity","min_max_step_control"),
+                    "label"=> __("Set Quantity Step ","min_max_step_control"),
                     "value"=>"",
                     "desc_tip"=> true,
-                     "help_tip" => __("Set Maximum Quantity","min_max_step_control"),
+                     "help_tip" => __("Set Quantity Step","min_max_step_control"),
                     "type"=>"number",
                     "step"=> 1,
                     "min"=>0,
