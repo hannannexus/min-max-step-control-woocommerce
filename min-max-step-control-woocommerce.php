@@ -88,3 +88,14 @@ if( !function_exists("mmscw_add_settings_panel")){
   }
 }
 add_action("woocommerce_product_data_panels","mmscw_add_settings_panel");
+
+/* Save min max and step meta data */
+if( !function_exists("mmscw_save_min_max_step_data")){
+  function mmscw_save_min_max_step_data( $id, $post){
+    
+    $mmscw_min_qty = sanitize_text_field( $_POST["mmscw_min_qty"]);
+    $mmscw_max_qty = sanitize_text_field( $_POST["mmscw_max_qty"]);
+    $mmscw_qty_step = sanitize_text_field( $_POST["mmscw_qty_step"]);
+  }
+}
+add_action( "woocommerce_process_product_meta","mmscw_save_min_max_step_data",333,2 );
