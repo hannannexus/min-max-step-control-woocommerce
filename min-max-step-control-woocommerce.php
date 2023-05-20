@@ -39,7 +39,7 @@ if( !function_exists("mmscw_add_settings_panel")){
                   woocommerce_wp_text_input(array(
                       "id" => "_mmscw_min_qty",
                       "label"=> __("Set Minimum Quantity","min_max_step_control"),
-                      "value"=> echo esc_attr(get_post_meta(get_the_ID(),"_mmscw_min_qty", true )),
+                      "value" => echo esc_attr(get_post_meta(get_the_ID(),"_mmscw_min_qty", true )),
                       "desc_tip"=> true,
                        "help_tip" => __("Set Minimum Quantity","min_max_step_control"),
                       "type"=> "number",
