@@ -40,7 +40,7 @@ if( !function_exists("mmscw_add_settings_panel")){
                   woocommerce_wp_text_input(array(
                     "id" => "mmscw_min_qty",
                     "label"=> __("Set Minimum Quantity","min_max_step_control"),
-                    "value"=>"",
+                    "value"=> get_post_meta(get_the_ID(),"mmscw_min_qty", true ),
                     "desc_tip"=> true,
                      "help_tip" => __("Set Minimum Quantity","min_max_step_control"),
                     "type"=>"number",
@@ -56,7 +56,7 @@ if( !function_exists("mmscw_add_settings_panel")){
                   woocommerce_wp_text_input(array(
                     "id" => "mmscw_max_qty",
                     "label"=> __("Set Maximum Quantity","min_max_step_control"),
-                    "value"=>"",
+                    "value" => get_post_meta(get_the_ID(),"mmscw_max_qty", true ),
                     "desc_tip"=> true,
                      "help_tip" => __("Set Maximum Quantity","min_max_step_control"),
                     "type"=>"number",
@@ -72,7 +72,7 @@ if( !function_exists("mmscw_add_settings_panel")){
                   woocommerce_wp_text_input(array(
                     "id" => "mmscw_qty_step",
                     "label"=> __("Set Quantity Step ","min_max_step_control"),
-                    "value"=>"",
+                    "value"=> get_post_meta(get_the_ID(),"mmscw_qty_step", true ),
                     "desc_tip"=> true,
                      "help_tip" => __("Set Quantity Step","min_max_step_control"),
                     "type"=>"number",
