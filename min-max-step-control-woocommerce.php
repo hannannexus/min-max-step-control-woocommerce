@@ -33,7 +33,7 @@ add_action("woocommerce_product_data_tabs","mmscw_add_new_tab",222,1);
 if( !function_exists("mmscw_add_settings_panel")){
   function mmscw_add_settings_panel(){
     ?>
-      <div id="mmscw_settings_panel" class="panel woocommerce_options_panel hidden">
+      <div id="min_max_step_control_option" class="panel woocommerce_options_panel hidden">
 
                <?php
                   woocommerce_wp_text_input(array(
